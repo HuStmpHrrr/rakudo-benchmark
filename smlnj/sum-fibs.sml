@@ -23,5 +23,5 @@ val begn = Time.now();
 iterate(10000000);
 val ed = Time.now();
 print ("sum fibs: "
-^ Real.toString(Real.fromLargeInt(Time.toMilliseconds(Time.-(ed, begn))) / 1000.0)
-^ " seconds / 10000000.\n");
+  ^ Real.toString(Real.fromLargeInt(Time.toMilliseconds(Time.-(ed, begn))) / 1000.0)
+  ^ " seconds / 10000000.\n");
