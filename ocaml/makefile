@@ -1,10 +1,10 @@
-TARGETS=sum-fibs
+TARGETS=$(basename $(wildcard *.ml))
 .PHONY:main clean
 
 main:${TARGETS}
 
 ${TARGETS}: %: %.ml
-	ocamlc -o $@ unix.cma $< 2>/dev/null
+	ocamlc -o $@ unix.cma $<
 	chmod +x $@
 
 clean:
