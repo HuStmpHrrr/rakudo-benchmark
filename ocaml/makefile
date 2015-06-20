@@ -9,4 +9,4 @@ ${TARGETS}: %: %.ml
 
 clean:
 	rm -rf *.cmi *.cmo
-	for f in *; do if [ -x $$f ]; then rm -f $$f; fi; done
+	for f in *; do if [ -x $$f ] && [ $$f != run.sh ]; then rm -f $$f; fi; done

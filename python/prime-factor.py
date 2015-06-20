@@ -2,7 +2,7 @@
 
 import timeit
 
-timer = timeit.Timer(stmt='''\
+timer = timeit.Timer(setup='''\
 def candidates():
     yield 2
     yield 3
@@ -16,6 +16,6 @@ def lpf(n):
         while n % i == 0:
             n /= i
             if i > n: return i
-''')
+''', stmt='lpf(600851475143)')
 
-print 'prime factor: {} seconds / 10000000'.format(timer.timeit(10000000))
+print 'prime factor: {} seconds / 1000'.format(timer.timeit(1000))
