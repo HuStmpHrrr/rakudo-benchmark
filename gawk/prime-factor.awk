@@ -28,5 +28,5 @@ BEGIN {
     for (j = 0; j < 5000; j++)
         lpf(600851475143);
     end = systime();
-    print "sum fibs:", end - begin, "seconds", "/", 5000
+    print "prime factor:", end - begin, "seconds", "/", 5000
 }

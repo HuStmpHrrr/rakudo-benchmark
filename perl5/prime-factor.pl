@@ -25,5 +25,5 @@ my @end = times;
 
 my @differences = map { $end[$_] - $begin[$_] } (0..$#begin);
 
-print "sum fibs: $differences[0] seconds / 1000\n";
+print "prime factor: $differences[0] seconds / 1000\n";
 

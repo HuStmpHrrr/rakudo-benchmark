@@ -1,4 +1,5 @@
 #!/usr/bin/env perl6
+use Bench;
 
 sub largest-prime-factor($n is copy) {
 	for 2, 3, *+2 ... * {
@@ -9,4 +10,5 @@ sub largest-prime-factor($n is copy) {
 	}
 }
 
-say largest-prime-factor(600_851_475_143);
+my $b = Bench.new;
+$b.timethis(1, sub { largest-prime-factor(600_851_475_143) }, :title('prime factor'));

@@ -2,7 +2,7 @@
 
 cd $(dirname `readlink -f $0`)
 
-make
+make &>/dev/null
 
 for f in *.java; do
 	java `basename ${f%%.*}`
